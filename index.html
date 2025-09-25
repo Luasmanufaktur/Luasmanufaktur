@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Mein Mini-Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Willkommen in meinem Mini-Shop</h1>
+
+<div class="tabs">
+  <button onclick="showTab('produkte')">Produkte</button>
+  <button onclick="showTab('infos')">Infos</button>
+  <button onclick="showTab('bestellen')">Bestellen</button>
+</div>
+
+<div id="produkte" class="tabcontent">
+  <h2>Unsere Produkte</h2>
+  <ul>
+    <li>Produkt 1 – Beschreibung</li>
+    <li>Produkt 2 – Beschreibung</li>
+    <li>Produkt 3 – Beschreibung</li>
+  </ul>
+</div>
+
+<div id="infos" class="tabcontent" style="display:none;">
+  <h2>Informationen</h2>
+  <p>Hier stehen Infos über unseren Shop, Versand, Rückgabe etc.</p>
+</div>
+
+<div id="bestellen" class="tabcontent" style="display:none;">
+  <h2>Bestellformular</h2>
+  <a href="form.html" class="bestellbutton">Hier bestellen</a>
+</div>
+
+<script>
+function showTab(tabName) {
+  const tabs = document.querySelectorAll('.tabcontent');
+  tabs.forEach(tab => tab.style.display = 'none');
+  document.getElementById(tabName).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
